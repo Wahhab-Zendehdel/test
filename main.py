@@ -2,11 +2,10 @@ from git import Repo
 import os
 # Initialize a new repo in the current directory
 repo = Repo.init()
-# repo.config_writer().set_value('user', 'email', 'Wahhabzendehdel@gmail.com')
-username = 'Wahhab-Zendehdel'
-os.environ['GIT_API_KEY'] = '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'
+username = 'your_user_name'
+os.environ['GIT_API_KEY'] = 'your_api_key'
 # Add remote origin
-origin = repo.create_remote('origin', f'https://{username}:{os.environ["GIT_API_KEY"]}@github.com/Wahhab-Zendehdel/test.git')
+origin = repo.create_remote('origin', f'https://{username}:{os.environ["GIT_API_KEY"]}@github.com/your_user_name/test.git')
 
 # Add file to the staging area
 repo.index.add(['main.py'])
